@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Busekrus - Portfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --orange-primary: #b96344;
+            --orange-secondary: #d68857;
+            --blue-primary: #60a5fa;
+            --blue-secondary: #3b82f6;
+            --dark-bg: #0a0a0a;
+            --dark-secondary: #121212;
+            --text-primary: #e5e5e5;
+            --text-secondary: #b0b0b0;
+            --text-muted: #808080;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.8;
+            color: var(--text-primary);
+            background-color: var(--dark-bg);
+            padding: 0;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Header Section */
+        header {
+            background: linear-gradient(135deg, var(--dark-secondary) 0%, var(--dark-bg) 100%);
+            /*background-image: url(background.gif);
+            background-size: cover;*/
+            padding: 3rem 0 2rem;
+            border-bottom: 1px solid var(--orange-primary);
+        }
+
+        .header-content {
+            text-align: center;
+            position: relative;
+            /*padding-bottom: 2rem;*/
+            margin-bottom: 2rem;
+        }
+
+        .header-content h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+            color: var(--text-primary);
+            background: linear-gradient(135deg, rgb(250, 112, 0), rgb(0, 100, 250));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header-content .tagline {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 1rem auto;
+            line-height: 1.8;
+        }
+
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .contact-info a {
+            color: var(--blue-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            color: var(--orange-primary);
+        }
+
+        .contact-info span {
+            color: var(--text-muted);
+        }
+
+        /* Navigation */
+        nav {
+            margin-top: 2rem;
+            text-align: center;
+        }
+
+        .nav-menu {
+            list-style: none;
+            display: inline-flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .nav-item {
+            position: relative;
+        }
+
+        .nav-link {
+            display: inline-block;
+            padding: 0.6rem 1.2rem;
+            color: var(--text-primary);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            cursor: pointer;
+            border-bottom: 2px solid transparent;
+        }
+
+        .nav-link:hover {
+            color: var(--orange-primary);
+            border-bottom-color: var(--orange-primary);
+        }
+
+        .nav-link.active {
+            color: var(--orange-primary);
+            border-bottom-color: var(--orange-primary);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%) translateY(-10px);
+            background-color: var(--dark-secondary);
+            min-width: 220px;
+            border: 1px solid var(--orange-primary);
+            border-radius: 4px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            margin-top: 0.5rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+        }
+
+        .dropdown-menu.show {
+            opacity: 1;
+            visibility: visible;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .dropdown-item {
+            padding: 0.7rem 1rem;
+            color: var(--text-secondary);
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+            text-align: left;
+        }
+
+        .dropdown-item:hover {
+            background-color: rgba(255, 107, 53, 0.1);
+            color: var(--orange-primary);
+        }
+
+        /* Main Content */
+        main {
+            padding: 3rem 0;
+        }
+
+        /* Education Section */
+        .education-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid;
+            border-bottom-color: var(--orange-primary);
+        }
+
+        .education-section h2 {
+            font-size: 1.8rem;
+            color: var(--orange-primary);
+            margin-bottom: 1rem;
+        }
+
+        .degree-info {
+            margin-bottom: 1rem;
+        }
+
+        .degree-info p {
+            color: var(--text-secondary);
+            margin: 0.3rem 0;
+        }
+
+        .degree-info strong {
+            color: var(--blue-primary);
+        }
+
+        /* Skills Section */
+        .skills-section {
+            margin-bottom: 3rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid rgba(96, 165, 250, 0.2);
+        }
+
+        .skills-section h2 {
+            font-size: 1.8rem;
+            color: var(--blue-primary);
+            margin-bottom: 1rem;
+        }
+
+        .skills-section strong {
+            color: var(--text-secondary);
+        }
+
+        .skills-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.8rem;
+            margin-top: 1rem;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            padding: 0.4rem 1rem;
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(96, 165, 250, 0.1));
+            border: 1px solid var(--orange-primary);
+            border-radius: 20px;
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .skill-tag:hover {
+            background: linear-gradient(135deg, rgba(255, 107, 53, 0.2), rgba(96, 165, 250, 0.2));
+            color: var(--text-primary);
+            transform: translateY(-2px);
+        }
+
+        /* Collapsible Sections */
+        .collapsible-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding: 1rem 0;
+            border-bottom: 2px solid var(--orange-primary);
+            transition: all 0.3s ease;
+        }
+
+        .section-header:hover {
+            padding-left: 0.5rem;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: var(--orange-primary);
+            margin: 0;
+        }
+
+        .section-header.blue h2 {
+            color: var(--blue-primary);
+        }
+
+        .section-header.blue {
+            border-bottom-color: var(--blue-primary);
+        }
+
+        .toggle-icon {
+            font-size: 1.5rem;
+            color: var(--orange-primary);
+            transition: transform 0.3s ease;
+        }
+
+        .section-header.blue .toggle-icon {
+            color: var(--blue-primary);
+        }
+
+        .toggle-icon.expanded {
+            transform: rotate(90deg);
+        }
+
+        .section-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease;
+        }
+
+        .section-content.expanded {
+            max-height: 3000px;
+        }
+
+        .section-inner {
+            padding: 2rem 0 1rem 0;
+        }
+
+        /* Content Items */
+        .content-item {
+            margin-bottom: 2.5rem;
+            padding-left: 1.5rem;
+            border-left: 3px solid var(--orange-primary);
+        }
+
+        .content-item.blue-accent {
+            border-left-color: var(--blue-primary);
+        }
+
+        .content-item h3 {
+            font-size: 1.3rem;
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .content-item .meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.8rem;
+        }
+
+        .content-item .meta strong {
+            color: var(--blue-primary);
+        }
+
+        .content-item p {
+            color: var(--text-secondary);
+            line-height: 1.8;
+            margin: 0.5rem 0;
+        }
+
+        .content-item ul {
+            margin: 0.8rem 0;
+            padding-left: 1.5rem;
+            color: var(--text-secondary);
+        }
+
+        .content-item ul li {
+            margin: 0.4rem 0;
+            line-height: 1.7;
+        }
+
+        .content-item a {
+            color: var(--blue-primary);
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .content-item a:hover {
+            color: var(--orange-primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+            border-top: 1px solid rgba(255, 107, 53, 0.2);
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                padding: 0 1.5rem;
+            }
+
+            .header-content h1 {
+                font-size: 2rem;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .nav-menu {
+                flex-direction: column;
+                gap: 0.3rem;
+            }
+
+            .dropdown-menu {
+                position: static;
+                transform: none;
+                margin-top: 0.5rem;
+            }
+
+            .section-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .content-item {
+                padding-left: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <h1>Jacob Busekrus</h1>
+                <p class="tagline">Passionate University of Florida student merging computer science and astronomy to support space discovery with code, data analysis, and problem-solving skills.</p>
+                <div class="contact-info">
+                    <span>(954) 857-1555</span>
+                    <span>•</span>
+                    <a href="mailto:Jake.busekrus@gmail.com">Jake.busekrus@gmail.com</a>
+                    <span>•</span>
+                    <a href="https://github.com/UY-scuti73" target="_blank">GitHub</a>
+                    <span>•</span>
+                    <a href="https://linkedin.com/in/jacob-busekrus" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Education Section -->
+            <section class="education-section">
+                <h2>Education</h2>
+                <div class="degree-info">
+                    <p><strong>University of Florida</strong></p>
+                    <p>Bachelor of Science in Computer Science • May 2026</p>
+                    <p>Bachelor of Arts in Astronomy • May 2026</p>
+                    <p>Master of Science in Computer Science • May 2027</p>
+                </div>
+            </section>
+
+            <!-- Skills Section -->
+            <section class="skills-section">
+                <h2>Skills & Expertise</h2>
+                <p><strong>Programming Languages</strong></p>
+                <div class="skills-list">
+                    <span class="skill-tag">C</span>
+                    <span class="skill-tag">C++</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Java</span>
+                    <span class="skill-tag">JavaScript</span>
+                    <span class="skill-tag">HTML/CSS</span>
+                    <span class="skill-tag">GDScript</span>
+                    <span class="skill-tag">R</span>
+                    <span class="skill-tag">Assembly</span>
+                </div>
+                <br>
+                <p><strong>Hard Skills</strong></p>
+                <div class="skills-list">
+                    <span class="skill-tag">Data Structures</span>
+                    <span class="skill-tag">Computer Architecture</span>
+                    <span class="skill-tag">Machine Learning</span>
+                    <span class="skill-tag">Website Development</span>
+                </div>
+            </section>
+
+            <!-- Experiences Section (Collapsible) -->
+            <section class="collapsible-section" id="experiences">
+                <div class="section-header" onclick="toggleSection('experiences-content', this)">
+                    <h2>Experiences</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="experiences-content">
+                    <div class="section-inner">
+                        <div class="content-item">
+                            <h3>Learning Assistant</h3>
+                            <div class="meta"><strong>Florida Atlantic University & University of Florida</strong> • Aug 2023 - May 2025</div>
+                            <ul>
+                                <li>Assisted nearly 100 Calculus 1 and 2 students at Florida Atlantic University</li>
+                                <li>Supported multiple hundreds of students in Physics 1 at University of Florida</li>
+                                <li>Used Socratic questioning to develop student problem-solving skills</li>
+                                <li>Completed advanced pedagogy coursework and applied active-learning methods</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section (Collapsible) -->
+            <section class="collapsible-section" id="projects">
+                <div class="section-header blue" onclick="toggleSection('projects-content', this)">
+                    <h2>Projects</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="projects-content">
+                    <div class="section-inner">
+                        <div class="content-item blue-accent">
+                            <h3>Minecraft Mod Developer</h3>
+                            <div class="meta"><strong>Independent Project</strong> • July 2024 - Present</div>
+                            <ul>
+                                <li>Designed and implemented four Java-based Minecraft mods</li>
+                                <li>Maintained codebase, fixed bugs, and iterated features based on user feedback</li>
+                                <li>Managed a Discord community with 30+ members</li>
+                                <li>Achieved 6,000+ downloads across all mods</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-item blue-accent">
+                            <h3>Astronomy Index</h3>
+                            <div class="meta"><strong>Website Developer</strong> • June 2022 - June 2025</div>
+                            <p>Built and maintained a solo, non-monetized frontend website presenting space science accessibly.</p>
+                            <ul>
+                                <li>Architected the UI and led a creative team to produce original artwork and gallery</li>
+                                <li>Described 90+ astronomical bodies and categorized solar system objects</li>
+                                <li>Classified 100 stars and 120 galaxies</li>
+                                <li>View site: <a href="https://astronomyindex.org" target="_blank">astronomyindex.org</a></li>
+                            </ul>
+                        </div>
+
+                        <div class="content-item blue-accent">
+                            <h3>Yapp - Social Platform</h3>
+                            <div class="meta"><strong>Front-end Developer</strong> • Spring 2025</div>
+                            <p>React/Next.js social platform for posts and direct messaging with positive affirmations.</p>
+                            <ul>
+                                <li>Developed UI components and features in agile sprints</li>
+                                <li>Implemented Firebase and MongoDB for backend functionality</li>
+                                <li>Created responsive design for optimal user experience</li>
+                                <li>Project link: <a href="http://bit.ly/42ASIcl" target="_blank">bit.ly/42ASIcl</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Clubs Section (Collapsible) -->
+            <section class="collapsible-section" id="clubs">
+                <div class="section-header" onclick="toggleSection('clubs-content', this)">
+                    <h2>Clubs & Organizations</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="clubs-content">
+                    <div class="section-inner">
+                        <div class="content-item">
+                            <h3>Technology and Aerospace Club</h3>
+                            <div class="meta"><strong>Active Member</strong> • January 2023 - May 2024</div>
+                            <p>Member of the FAU Technology and Aerospace club, helping on a number of club organized projects</p>
+                            <ul>
+                                <li>Built drones from scratch in team settings—assembled frames, mounted components, performed basic setup, and conducted initial flight training with documented testing and iteration</li>
+                                <li>Structural builder for an FPGA-controlled inverted pendulum: fabricated chassis and mounts, optimized center of mass and rigidity, and supported integration/testing with the controls team</li>
+                                <li>Supported test workflows through checklists, issue tracking, and iterative hardware adjustments</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Competitions Section (Collapsible) -->
+            <section class="collapsible-section" id="competitions">
+                <div class="section-header blue" onclick="toggleSection('competitions-content', this)">
+                    <h2>Competitions</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="competitions-content">
+                    <div class="section-inner">
+                        <div class="content-item blue-accent">
+                            <h3>Godot Game Jam</h3>
+                            <div class="meta"><strong>Participant</strong> • Spring 2024</div>
+                            <p>Worked in a team to create a jam game in Godot, contributing gameplay code, polish, and fixes, plus a supporting tutorial video</p>
+                            <ul>
+                                <li>Programmed parts of the game using Godot (GDScript), contributing core gameplay behavior and interactions</li>
+                                <li>Polished the build and pushed game-fixing updates (bug fixes, stability, small UX improvements)</li>
+                                <li>Created and uploaded a tutorial video to document and explain key elements</li>
+                                <li>Play Here: <a href="https://tarnest.itch.io/the-monkeys-paw-finished" target="_blank">Monkeys Paw</a></li>
+                            </ul>
+                        </div>
+                        <div class="content-item blue-accent">
+                            <h3>LeetCode Tournament</h3>
+                            <div class="meta"><strong>Participant</strong> • Spring 2025</div>
+                            <p>Competed in algorithmic problem-solving challenges, demonstrating proficiency in data structures, algorithms, and optimization techniques. Applied competitive programming skills to solve complex computational problems under time constraints.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Achievements Section (Collapsible) -->
+            <section class="collapsible-section" id="achievements">
+                <div class="section-header" onclick="toggleSection('achievements-content', this)">
+                    <h2>Achievements & Honors</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="achievements-content">
+                    <div class="section-inner">
+                        <div class="content-item">
+                            <h3>George Snow Scholar</h3>
+                            <p>Recipient of the George Snow Scholarship, awarded to outstanding students demonstrating academic excellence, leadership, and community involvement.</p>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>FAU High School Graduate</h3>
+                            <p>Graduated from Florida Atlantic University High School, a rigorous dual-enrollment program combining high school and college coursework.</p>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>Dean's List</h3>
+                            <p>Consistently achieved Dean's List honors for academic excellence at FAU & UF.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Jacob Busekrus. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Navigation dropdown functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const navLinks = document.querySelectorAll('.nav-link[data-dropdown]');
+            
+            navLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    
+                    const dropdownId = this.getAttribute('data-dropdown') + '-dropdown';
+                    const dropdown = document.getElementById(dropdownId);
+                    
+                    // Close all other dropdowns
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        if (menu.id !== dropdownId) {
+                            menu.classList.remove('show');
+                        }
+                    });
+                    
+                    // Remove active class from all nav links
+                    navLinks.forEach(navLink => {
+                        if (navLink !== this) {
+                            navLink.classList.remove('active');
+                        }
+                    });
+                    
+                    // Toggle current dropdown
+                    dropdown.classList.toggle('show');
+                    this.classList.toggle('active');
+                });
+            });
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!e.target.closest('.nav-item')) {
+                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                        menu.classList.remove('show');
+                    });
+                    document.querySelectorAll('.nav-link').forEach(link => {
+                        link.classList.remove('active');
+                    });
+                }
+            });
+            
+            // Smooth scroll for dropdown items
+            document.querySelectorAll('.dropdown-item').forEach(item => {
+                item.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href').substring(1);
+                    const targetSection = document.getElementById(targetId);
+                    if (targetSection) {
+                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        // Close dropdown after clicking
+                        document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                            menu.classList.remove('show');
+                        });
+                        document.querySelectorAll('.nav-link').forEach(link => {
+                            link.classList.remove('active');
+                        });
+                    }
+                });
+            });
+        });
+
+        // Collapsible section functionality
+        function toggleSection(contentId, headerElement) {
+            const content = document.getElementById(contentId);
+            const icon = headerElement.querySelector('.toggle-icon');
+            
+            content.classList.toggle('expanded');
+            icon.classList.toggle('expanded');
+        }
+    </script>
+</body>
+</html>
