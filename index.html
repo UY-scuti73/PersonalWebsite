@@ -412,7 +412,7 @@
                 <h1>Jacob Busekrus</h1>
                 <p class="tagline">Passionate University of Florida student merging computer science and astronomy to support space discovery with code, data analysis, and problem-solving skills.</p>
                 <div class="contact-info">
-                    <span>(954) 857-1555</span>
+                    <span>(954) 551-1942</span>
                     <span>•</span>
                     <a href="mailto:Jake.busekrus@gmail.com">Jake.busekrus@gmail.com</a>
                     <span>•</span>
@@ -459,6 +459,7 @@
                     <span class="skill-tag">Computer Architecture</span>
                     <span class="skill-tag">Machine Learning</span>
                     <span class="skill-tag">Website Development</span>
+                    <span class="skill-tag">Astrophysics</span>
                 </div>
             </section>
 
@@ -484,24 +485,14 @@
                 </div>
             </section>
 
-            <!-- Projects Section (Collapsible) -->
-            <section class="collapsible-section" id="projects">
-                <div class="section-header blue" onclick="toggleSection('projects-content', this)">
-                    <h2>Projects</h2>
+            <!-- Websites Section (Collapsible) -->
+            <section class="collapsible-section" id="websites">
+                <div class="section-header blue" onclick="toggleSection('websites-content', this)">
+                    <h2>Websites</h2>
                     <span class="toggle-icon">▶</span>
                 </div>
-                <div class="section-content" id="projects-content">
+                <div class="section-content" id="websites-content">
                     <div class="section-inner">
-                        <div class="content-item blue-accent">
-                            <h3>Minecraft Mod Developer</h3>
-                            <div class="meta"><strong>Independent Project</strong> • July 2024 - Present</div>
-                            <ul>
-                                <li>Designed and implemented four Java-based Minecraft mods</li>
-                                <li>Maintained codebase, fixed bugs, and iterated features based on user feedback</li>
-                                <li>Managed a Discord community with 30+ members</li>
-                                <li>Achieved 6,000+ downloads across all mods</li>
-                            </ul>
-                        </div>
 
                         <div class="content-item blue-accent">
                             <h3>Astronomy Index</h3>
@@ -525,6 +516,84 @@
                                 <li>Created responsive design for optimal user experience</li>
                                 <li>Project link: <a href="http://bit.ly/42ASIcl" target="_blank">bit.ly/42ASIcl</a></li>
                             </ul>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Projects Section (Collapsible) -->
+            <section class="collapsible-section" id="projects">
+                <div class="section-header" onclick="toggleSection('projects-content', this)">
+                    <h2>Projects</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="projects-content">
+                    <div class="section-inner">
+
+                        <div class="content-item">
+                            <h3>Minecraft Mod Developer</h3>
+                            <div class="meta"><strong>Independent Project</strong> (Java) • July 2024 - Present</div>
+                            <ul>
+                                <li>Designed and implemented four Java-based Minecraft mods</li>
+                                <li>Maintained codebase, fixed bugs, and iterated features based on user feedback</li>
+                                <li>Managed a Discord community with 30+ members</li>
+                                <li>Achieved 6,000+ downloads across all mods</li>
+                            </ul>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>Memory Manager</h3>
+                            <div class="meta"><strong>Operating Systems Project</strong> (C++) • Spring 2025</div>
+                            <p>Created a program that would manage a hypothetical slice of memory. Utilized the heap and used Valgrind to check and eliminate any memory leaks</p>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>WAD File System</h3>
+                            <div class="meta"><strong>Operating Systems Project</strong> (C++) • Spring 2025</div>
+                            <p>Implemented a WAD file system in C++ and connected it to a linux interface using wadfs</p>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>RISCV Simulator</h3>
+                            <div class="meta"><strong>Computer Architecture Project</strong> (Python) • Fall 2025</div>
+                            <p>Created a program that would interpret a text file of 32-bit binary instructions, dissasemble the binary into RISCV instructions, and simulate the code provided. The simulator can execute normally or with pipelining</p>
+                        </div>
+
+                        <div class="content-item">
+                            <h3>Airport Management Simulator</h3>
+                            <div class="meta"><strong>Adv. Data Structures Project</strong> (Python) • Fall 2025</div>
+                            <p>Created a program that simulates an airport with flights constantly being added and removed to the system. Implemented binary min trees and max paring heaps to determine the best flight and runway for the current instance</p>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <!-- Research Section (Collapsible) -->
+            <section class="collapsible-section" id="research">
+                <div class="section-header blue" onclick="toggleSection('research-content', this)">
+                    <h2>Research</h2>
+                    <span class="toggle-icon">▶</span>
+                </div>
+                <div class="section-content" id="research-content">
+                    <div class="section-inner">
+
+                        <div class="content-item blue-accent">
+                            <h3>Solar Feature Detection</h3>
+                            <div class="meta"><strong>Independent Researcher</strong> • Sprint 2025</div>
+                            <p>Developed a machine learning model that can detect the differences between features on the sun such as solar flares, prominences, CME's, and sunspots</p>
+                        </div>
+
+                        <div class="content-item blue-accent">
+                            <h3>Memory Leak Research</h3>
+                            <div class="meta"><strong>Independent Researcher</strong> • Summer 2025</div>
+                            <p>Drafted a failure analysis, research report, and project proposal that focused on identifying and fixing memory leaks in memory accessible programming languages</p>
+                        </div>
+
+                        <div class="content-item blue-accent">
+                            <h3>Cache Analysis Research</h3>
+                            <div class="meta"><strong>Independent Researcher</strong> • Fall 2024</div>
+                            <p>Analyzed different types of caches and how they compare when the cache size and block size is increased</p>
                         </div>
                     </div>
                 </div>
