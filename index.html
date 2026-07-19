@@ -1,387 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jacob Busekrus - Personal Website</title>
-    <link rel="stylesheet" href="main.css">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Jacob Busekrus | Personal Website</title>
+    <link rel="stylesheet" href="main.css" />
+    <script src="webScript.js" defer></script>
 </head>
 <body>
-    <header>
-        <div class="container">
-            <div class="header-content">
-                <h1>Jacob Busekrus</h1>
-                <p class="tagline">Passionate University of Florida student merging computer science and astronomy to support space discovery with code, data analysis, and problem-solving skills.</p>
-                <div class="contact-info">
+<header id="top">
+    <div class="container hero">
+        <div class="topbar">
+            <div class="brand">Jacob Busekrus</div>
+            <nav class="nav">
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Activities</a>
+            </nav>
+        </div>
+
+        <div class="hero-grid">
+            <div class="hero-copy fade">
+                <h1>Jacob Busekrus’s Personal Website</h1>
+                <p>
+                    I’m a University of Florida student focused on using software, data analysis,
+                    and technical problem-solving to support meaningful work in computing, science,
+                    and space-related applications.
+                </p>
+
+                <div class="contact">
                     <span>(954) 551-1942</span>
-                    <span>•</span>
                     <a href="mailto:Jake.busekrus@gmail.com">Jake.busekrus@gmail.com</a>
-                    <span>•</span>
-                    <a href="https://github.com/UY-scuti73" target="_blank">GitHub</a>
-                    <span>•</span>
-                    <a href="https://linkedin.com/in/jacob-busekrus" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/UY-scuti73" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    <a href="https://linkedin.com/in/jacob-busekrus" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                </div>
+
+                <div class="actions">
+                    <a class="btn primary" href="#experience">View Featured Work</a>
+                    <a class="btn secondary" href="skills.html">All Skills</a>
+                    <a class="btn secondary" href="activities.html">All Activities</a>
                 </div>
             </div>
-        </div>
-    </header>
 
-    <main>
+            <div class="media image-only fade" style="min-height:360px">
+                <img src="images/Headshot.jpg" alt="Headshot" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+    <section class="section" id="about">
         <div class="container">
-            <section class="interview-section">
-                <h2>Mock Interview</h2>
-                <p>
-                    My father and I conducted a structured mock interview
-                    to answer common interview questions,
-                    enabling employers to review my responses to general questions.
-                    <br>
-                </p>
-                <p>
-                    <a href="mock.html">
-                        <br>Mock Interview Link
-                    </a>
-                </p>
-            </section>
+            <div class="section-header fade">
+                <span class="eyebrow">Overview</span>
+            </div>
 
-            <!-- Education Section -->
-            <section class="education-section">
-                <h2>Education</h2>
-                <div class="degree-info">
-                    <p><strong>University of Florida</strong></p>
-                    <p>Bachelor of Science in Computer Science • May 2026</p>
-                    <p>Bachelor of Arts in Astronomy • May 2026</p>
-                    <p>Master of Science in Computer Science • May 2027</p>
-                </div>
-            </section>
-
-            <!-- Skills Section -->
-            <section class="skills-section">
-                <h2>Skills & Expertise</h2>
-                <p><strong>Programming Languages</strong></p>
-                <div class="skills-list">
-                    <span class="skill-tag">C</span>
-                    <span class="skill-tag">C++</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">Java</span>
-                    <span class="skill-tag">JavaScript</span>
-                    <span class="skill-tag">HTML/CSS</span>
-                    <span class="skill-tag">GDScript</span>
-                    <span class="skill-tag">R</span>
-                    <span class="skill-tag">Assembly</span>
-                </div>
-                <br>
-                <p><strong>Hard Skills</strong></p>
-                <div class="skills-list">
-                    <span class="skill-tag">Data Structures</span>
-                    <span class="skill-tag">Computer Architecture</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Website Development</span>
-                    <span class="skill-tag">Astrophysics</span>
-                </div>
-            </section>
-
-            <!-- Experiences Section (Collapsible) -->
-            <section class="collapsible-section" id="experiences">
-                <div class="section-header" onclick="toggleSection('experiences-content', this)">
-                    <h2>Highlighted Experiences</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="experiences-content">
-                    <div class="section-inner">
-                        <div class="content-item">
-                            <h3>Learning Assistant</h3>
-                            <div class="meta"><strong>Florida Atlantic University & University of Florida</strong> • Aug 2023 - May 2025</div>
-                            <ul>
-                                <li>Assisted nearly 100 Calculus 1 and 2 students at Florida Atlantic University</li>
-                                <li>Supported multiple hundreds of students in Physics 1 at University of Florida</li>
-                                <li>Used Socratic questioning to develop student problem-solving skills</li>
-                                <li>Completed advanced pedagogy coursework and applied active-learning methods</li>
-                            </ul>
+            <div class="split-list">
+                <article class="split fade">
+                    <div class="content">
+                        <h3>Education</h3>
+                        <div class="meta" style="margin-bottom:.55rem">
+                            <strong style="color: var(--blue)">Florida Atlantic University High School</strong> • Spring 2024
                         </div>
+                        <ul>
+                            <li>High School Diploma • Spring 2024</li>
+                        </ul>
 
-                        <div class="content-item">
-                            <h3>Minecraft Mod Developer</h3>
-                            <div class="meta"><strong>Independent Project</strong> (Java) • July 2024 - Present</div>
-                            <ul>
-                                <li>Designed and implemented four Java-based Minecraft mods</li>
-                                <li>Maintained codebase, fixed bugs, and iterated features based on user feedback</li>
-                                <li>Managed a Discord community with 30+ members</li>
-                                <li>Achieved 14,000+ downloads across all mods</li>
-                            </ul>
+                        <div class="meta" style="margin-top:.75rem">
+                            <strong style="color: var(--blue)">University of Florida</strong>
                         </div>
+                        <ul>
+                            <li>Bachelor of Science in Computer Science • Spring 2026</li>
+                            <li>Bachelor of Arts in Astronomy • Spring 2026</li>
+                            <li>Master of Science in Computer Science • Spring 2027</li>
+                        </ul>
+                        <p>Average GPA: <strong>3.8</strong></p>
+                    </div>
+                    <div class="media image-only">
+                        <img src="images/UniversityofFlorida.jpg" alt="Education" />
+                    </div>
+                </article>
 
-                        <div class="content-item">
-                            <h3>AI Hallucination Research</h3>
-                            <div class="meta"><strong>Senior Capstone Project</strong> January 2026 - Present</div>
-                            <ul>
-                                <li>Implemented a website that can estimate whether a response from a LLM is being hallucinated</li>
-                                <li>Designated project manager and managed a group of students, leading the team to uphold deadlines and appease supervisors</li>
-                                <li>Continued the research of Dr. Sumit Jha to develop the theory he researched</li>
-                            </ul>
+                <article class="split reverse fade">
+                    <div class="content">
+                        <h3>Mock Interview</h3>
+                        <div class="meta"><strong>Employer-facing</strong> • Common interview questions</div>
+                        <p>My father and I conducted a structured mock interview so employers can review my responses to general questions.</p>
+                        <p style="margin-top:1rem"><a href="mock.html">Open Mock Interview</a></p>
+                    </div>
+                    <div class="media" style="padding:0;display:flex">
+                        <div style="width:100%;border-radius:calc(var(--r) - 6px);overflow:hidden">
+                            <iframe
+                                    src="https://www.youtube.com/embed/gcVnHr8MjQ0"
+                                    title="YouTube video player"
+                                    style="width:100%;height:100%;min-height:250px;border:0;display:block"
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                    allowfullscreen
+                            ></iframe>
                         </div>
                     </div>
-                </div>
-            </section>
-
-            <!-- Websites Section (Collapsible) -->
-            <section class="collapsible-section" id="websites">
-                <div class="section-header blue" onclick="toggleSection('websites-content', this)">
-                    <h2>Websites</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="websites-content">
-                    <div class="section-inner">
-
-                        <div class="content-item blue-accent">
-                            <h3>Astronomy Index</h3>
-                            <div class="meta"><strong>Website Developer</strong> • June 2022 - June 2025</div>
-                            <p>Built and maintained a solo, non-monetized frontend website presenting space science accessibly.</p>
-                            <ul>
-                                <li>Architected the UI and led a creative team to produce original artwork and gallery</li>
-                                <li>Described 90+ astronomical bodies and categorized solar system objects</li>
-                                <li>Classified 100 stars and 120 galaxies</li>
-                                <li>View site: <a href="https://astronomyindex.org" target="_blank">astronomyindex.org</a></li>
-                            </ul>
-                        </div>
-
-                        <div class="content-item blue-accent">
-                            <h3>Yapp - Social Platform</h3>
-                            <div class="meta"><strong>Front-end Developer</strong> • Spring 2025</div>
-                            <p>React/Next.js social platform for posts and direct messaging with positive affirmations.</p>
-                            <ul>
-                                <li>Developed UI components and features in agile sprints</li>
-                                <li>Implemented Firebase and MongoDB for backend functionality</li>
-                                <li>Created responsive design for optimal user experience</li>
-                                <li>Project link: <a href="http://bit.ly/42ASIcl" target="_blank">bit.ly/42ASIcl</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Projects Section (Collapsible) -->
-            <section class="collapsible-section" id="projects">
-                <div class="section-header" onclick="toggleSection('projects-content', this)">
-                    <h2>Projects</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="projects-content">
-                    <div class="section-inner">
-
-                        <div class="content-item">
-                            <h3>Memory Manager</h3>
-                            <div class="meta"><strong>Operating Systems Project</strong> (C++) • Spring 2025</div>
-                            <p>Created a program that would manage a hypothetical slice of memory. Utilized the heap and used Valgrind to check and eliminate any memory leaks</p>
-                        </div>
-
-                        <div class="content-item">
-                            <h3>WAD File System</h3>
-                            <div class="meta"><strong>Operating Systems Project</strong> (C++) • Spring 2025</div>
-                            <p>Implemented a WAD file system in C++ and connected it to a linux interface using wadfs</p>
-                        </div>
-
-                        <div class="content-item">
-                            <h3>RISCV Simulator</h3>
-                            <div class="meta"><strong>Computer Architecture Project</strong> (Python) • Fall 2025</div>
-                            <p>Created a program that would interpret a text file of 32-bit binary instructions, dissasemble the binary into RISCV instructions, and simulate the code provided. The simulator can execute normally or with pipelining</p>
-                        </div>
-
-                        <div class="content-item">
-                            <h3>Airport Management Simulator</h3>
-                            <div class="meta"><strong>Adv. Data Structures Project</strong> (Python) • Fall 2025</div>
-                            <p>Created a program that simulates an airport with flights constantly being added and removed to the system. Implemented binary min trees and max paring heaps to determine the best flight and runway for the current instance</p>
-                        </div>
-
-                    </div>
-                </div>
-            </section>
-
-            <!-- Research Section (Collapsible) -->
-            <section class="collapsible-section" id="research">
-                <div class="section-header blue" onclick="toggleSection('research-content', this)">
-                    <h2>Research</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="research-content">
-                    <div class="section-inner">
-
-                        <div class="content-item blue-accent">
-                            <h3>Solar Feature Detection</h3>
-                            <div class="meta"><strong>Independent Researcher</strong> • Sprint 2025</div>
-                            <p>Developed a machine learning model that can detect the differences between features on the sun such as solar flares, prominences, CME's, and sunspots</p>
-                        </div>
-
-                        <div class="content-item blue-accent">
-                            <h3>Memory Leak Research</h3>
-                            <div class="meta"><strong>Independent Researcher</strong> • Summer 2025</div>
-                            <p>Drafted a failure analysis, research report, and project proposal that focused on identifying and fixing memory leaks in memory accessible programming languages</p>
-                        </div>
-
-                        <div class="content-item blue-accent">
-                            <h3>Cache Analysis Research</h3>
-                            <div class="meta"><strong>Independent Researcher</strong> • Fall 2024</div>
-                            <p>Analyzed different types of caches and how they compare when the cache size and block size is increased</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Clubs Section (Collapsible) -->
-            <section class="collapsible-section" id="clubs">
-                <div class="section-header" onclick="toggleSection('clubs-content', this)">
-                    <h2>Clubs & Organizations</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="clubs-content">
-                    <div class="section-inner">
-                        <div class="content-item">
-                            <h3>Technology and Aerospace Club</h3>
-                            <div class="meta"><strong>Active Member</strong> • January 2023 - May 2024</div>
-                            <p>Member of the FAU Technology and Aerospace club, helping on a number of club organized projects</p>
-                            <ul>
-                                <li>Built drones from scratch in team settings—assembled frames, mounted components, performed basic setup, and conducted initial flight training with documented testing and iteration</li>
-                                <li>Structural builder for an FPGA-controlled inverted pendulum: fabricated chassis and mounts, optimized center of mass and rigidity, and supported integration/testing with the controls team</li>
-                                <li>Supported test workflows through checklists, issue tracking, and iterative hardware adjustments</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Competitions Section (Collapsible) -->
-            <section class="collapsible-section" id="competitions">
-                <div class="section-header blue" onclick="toggleSection('competitions-content', this)">
-                    <h2>Competitions</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="competitions-content">
-                    <div class="section-inner">
-                        <div class="content-item blue-accent">
-                            <h3>Godot Game Jam</h3>
-                            <div class="meta"><strong>Participant</strong> • Spring 2024</div>
-                            <p>Worked in a team to create a jam game in Godot, contributing gameplay code, polish, and fixes, plus a supporting tutorial video</p>
-                            <ul>
-                                <li>Programmed parts of the game using Godot (GDScript), contributing core gameplay behavior and interactions</li>
-                                <li>Polished the build and pushed game-fixing updates (bug fixes, stability, small UX improvements)</li>
-                                <li>Created and uploaded a tutorial video to document and explain key elements</li>
-                                <li>Play Here: <a href="https://tarnest.itch.io/the-monkeys-paw-finished" target="_blank">Monkeys Paw</a></li>
-                            </ul>
-                        </div>
-                        <div class="content-item blue-accent">
-                            <h3>LeetCode Tournament</h3>
-                            <div class="meta"><strong>Participant</strong> • Spring 2025</div>
-                            <p>Competed in algorithmic problem-solving challenges, demonstrating proficiency in data structures, algorithms, and optimization techniques. Applied competitive programming skills to solve complex computational problems under time constraints.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Achievements Section (Collapsible) -->
-            <section class="collapsible-section" id="achievements">
-                <div class="section-header" onclick="toggleSection('achievements-content', this)">
-                    <h2>Achievements & Honors</h2>
-                    <span class="toggle-icon">▶</span>
-                </div>
-                <div class="section-content" id="achievements-content">
-                    <div class="section-inner">
-                        <div class="content-item">
-                            <h3>George Snow Scholar</h3>
-                            <p>Recipient of the George Snow Scholarship, awarded to outstanding students demonstrating academic excellence, leadership, and community involvement.</p>
-                        </div>
-
-                        <div class="content-item">
-                            <h3>FAU High School Graduate</h3>
-                            <p>Graduated from Florida Atlantic University High School, a rigorous dual-enrollment program combining high school and college coursework.</p>
-                        </div>
-
-                        <div class="content-item">
-                            <h3>Dean's List</h3>
-                            <p>Consistently achieved Dean's List honors for academic excellence at FAU & UF.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+                </article>
+            </div>
         </div>
-    </main>
+    </section>
 
-    <footer>
+    <section class="section" id="skills">
         <div class="container">
-            <p>&copy; 2024 Jacob Busekrus. All rights reserved.</p>
+            <div class="section-header fade">
+                <span class="eyebrow">Skills</span>
+            </div>
+
+            <div class="skills-wrap">
+                <div class="fade">
+                    <h3 style="margin-bottom:1rem">Featured Skills</h3>
+                    <div class="skills-list">
+                        <div class="skill-orb">C++</div>
+                        <div class="skill-orb">Python</div>
+                        <div class="skill-orb">Java</div>
+                        <div class="skill-orb">Database Systems</div>
+                        <div class="skill-orb">Data Structures</div>
+                        <div class="skill-orb">Astrophysics</div>
+                    </div>
+                </div>
+
+                <article class="project-card fade" style="max-width: 100%;">
+                    <h3>Explore all skills</h3>
+                    <p style="color: var(--text2);">
+                        I have a dedicated page that organizes all of my skills, and how they can be applicable to future jobs.
+                    </p>
+
+                    <div class="actions" style="margin-top: 1rem;">
+                        <a class="btn secondary" href="skills.html">Go to All Skills</a>
+                    </div>
+                </article>
+            </div>
         </div>
-    </footer>
+    </section>
 
-    <script>
-        // Navigation dropdown functionality
-        document.addEventListener('DOMContentLoaded', function() {
-            const navLinks = document.querySelectorAll('.nav-link[data-dropdown]');
-            
-            navLinks.forEach(link => {
-                link.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    e.stopPropagation();
-                    
-                    const dropdownId = this.getAttribute('data-dropdown') + '-dropdown';
-                    const dropdown = document.getElementById(dropdownId);
-                    
-                    // Close all other dropdowns
-                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                        if (menu.id !== dropdownId) {
-                            menu.classList.remove('show');
-                        }
-                    });
-                    
-                    // Remove active class from all nav links
-                    navLinks.forEach(navLink => {
-                        if (navLink !== this) {
-                            navLink.classList.remove('active');
-                        }
-                    });
-                    
-                    // Toggle current dropdown
-                    dropdown.classList.toggle('show');
-                    this.classList.toggle('active');
-                });
-            });
-            
-            // Close dropdown when clicking outside
-            document.addEventListener('click', function(e) {
-                if (!e.target.closest('.nav-item')) {
-                    document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                        menu.classList.remove('show');
-                    });
-                    document.querySelectorAll('.nav-link').forEach(link => {
-                        link.classList.remove('active');
-                    });
-                }
-            });
-            
-            // Smooth scroll for dropdown items
-            document.querySelectorAll('.dropdown-item').forEach(item => {
-                item.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const targetId = this.getAttribute('href').substring(1);
-                    const targetSection = document.getElementById(targetId);
-                    if (targetSection) {
-                        targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                        // Close dropdown after clicking
-                        document.querySelectorAll('.dropdown-menu').forEach(menu => {
-                            menu.classList.remove('show');
-                        });
-                        document.querySelectorAll('.nav-link').forEach(link => {
-                            link.classList.remove('active');
-                        });
-                    }
-                });
-            });
-        });
+    <section class="section" id="experience">
+        <div class="container">
+            <div class="section-header fade">
+                <span class="eyebrow">Activities</span>
+            </div>
+            <h3 style="margin-bottom:1rem">Featured Activities</h3>
+            <div class="split-list">
+                <article class="split fade">
 
-        // Collapsible section functionality
-        function toggleSection(contentId, headerElement) {
-            const content = document.getElementById(contentId);
-            const icon = headerElement.querySelector('.toggle-icon');
-            
-            content.classList.toggle('expanded');
-            icon.classList.toggle('expanded');
-        }
-    </script>
+                    <div class="content">
+                        <h3>Mod Developer</h3>
+                        <div class="skills-inline">
+                            <span class="label">Skills learned from this:</span>
+                            <div class="chips">
+                                <span class="chip">Java</span>
+                                <span class="chip">C++</span>
+                                <span class="chip">Object-oriented design</span>
+                                <span class="chip">Performance tuning</span>
+                                <span class="chip">Release management</span>
+                                <span class="chip">Community-driven roadmap</span>
+                            </div>
+                        </div>
+                        <div class="meta"><strong>Independent Projects</strong> • Summer 2024 - Current</div>
+                        <p>
+                            Designed and implemented multiple Minecraft and Geometry Dash extensions using Java/C++ and object‑oriented principles.
+                            Grew and managed an active Discord community by soliciting feedback, prioritizing requests, and rolling updates that improved stability and player experience.
+                        </p>
+                        <ul>
+                            <li>Focused development on usability, performance, and community-driven feature development</li>
+                            <li>Achieved 60,000+ total downloads across all mods</li>
+                            <li>Grew and managed an active community (90+ members)</li>
+                        </ul>
+                        <p style="margin-top:.6rem;color:var(--text2)">
+                            Links:
+                            <a href="#" target="_blank" rel="noopener noreferrer">Modrinth</a>
+                            <span style="color:var(--muted)"> • </span>
+                            <a href="https://www.curseforge.com/members/bowser_the_boss/projects" target="_blank" rel="noopener noreferrer">CurseForge</a>
+                            <span style="color:var(--muted)"> • </span>
+                            <a href="https://www.spigotmc.org/members/bowser_the_boss.1064717/" target="_blank" rel="noopener noreferrer">Spigot</a>
+                            <span style="color:var(--muted)"> • </span>
+                            <a href="https://geode-sdk.org/mods?developer=UY-scuti73" target="_blank" rel="noopener noreferrer">Geode</a>
+                        </p>
+                    </div>
+                    <div class="media image-only">
+                        <img src="images/Modding.png" alt="Mod developer" />
+                    </div>
+                </article>
+
+                <article class="split reverse fade">
+                    <div class="content">
+                        <h3>AI Hallucination Research</h3>
+                        <div class="skills-inline">
+                            <span class="label">Skills learned from this:</span>
+                            <div class="chips">
+                                <span class="chip">Project management</span>
+                                <span class="chip">Web development</span>
+                                <span class="chip">Applied AI evaluation</span>
+                                <span class="chip">Stakeholder communication</span>
+                            </div>
+                        </div>
+                        <div class="meta"><strong>Senior Capstone Project</strong> • Spring 2026 - Present</div>
+                        <p>Implemented a website approach to estimate whether an LLM response may be hallucinated and helped manage team coordination.</p>
+                        <ul>
+                            <li>Implemented a website that estimates whether an LLM response may be hallucinated</li>
+                            <li>Served as project manager and helped maintain deadlines and communication</li>
+                            <li>Continued the research direction of Dr. Sumit Jha</li>
+                        </ul>
+                    </div>
+                    <div class="media image-only">
+                        <img src="images/NearScore.png" alt="AI hallucination project" />
+                    </div>
+                </article>
+
+                <div class="projects-grid">
+                    <article class="project-card fade">
+                        <h3>Learning Assistant</h3>
+                        <div class="skills-inline">
+                            <span class="label">Skills learned from this:</span>
+                            <div class="chips">
+                                <span class="chip">Teaching</span>
+                                <span class="chip">Communication</span>
+                                <span class="chip">Mentorship</span>
+                                <span class="chip">Problem solving</span>
+                            </div>
+                        </div>
+                        <div class="meta"><strong>Florida Atlantic University & University of Florida</strong> • Fall 2023 - Spring 2025</div>
+                        <p>Supported students in technical coursework while helping them become more confident and independent problem-solvers.</p>
+                        <ul class="project-content">
+                            <li>Assisted nearly 100 Calculus 1 and 2 students at FAU</li>
+                            <li>Supported multiple hundreds of students in Physics 1 at UF</li>
+                            <li>Used Socratic questioning to develop student problem-solving skills</li>
+                            <li>Completed advanced pedagogy coursework and applied active-learning methods</li>
+                        </ul>
+                    </article>
+
+                    <article class="project-card fade">
+                        <h3>Management Assistant</h3>
+                        <div class="skills-inline">
+                            <span class="label">Skills learned from this:</span>
+                            <div class="chips">
+                                <span class="chip">Office operations</span>
+                                <span class="chip">Records management</span>
+                                <span class="chip">Collaboration</span>
+                                <span class="chip">Process automation</span>
+                            </div>
+                        </div>
+                        <div class="meta"><strong>Campbell Property Management</strong> • Summer 2026</div>
+                        <p>Supported daily office operations by organizing files, maintaining accurate records, and assisting with administrative tasks, including small automations to streamline repetitive processes.</p>
+                        <ul class="project-content">
+                            <li>Updated the company’s online system to keep homeowner files and records current and accurate</li>
+                            <li>Worked collaboratively in a professional office environment and communicated effectively with team members</li>
+                            <li>Coded small automations to streamline repetitive processes for myself and other employees</li>
+                        </ul>
+                    </article>
+                </div>
+
+                <article class="project-card fade" style="max-width: 100%;">
+                    <h3>Explore all activities</h3>
+                    <p style="color: var(--text2);">
+                        I have a dedicated page that organizes all of my work, projects, websites, school assignments,
+                        extracurriculars, and honors in one place, including a timeline view.
+                    </p>
+
+                    <div class="actions" style="margin-top: 1rem;">
+                        <a class="btn secondary" href="activities.html">Go to All Activities</a>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container"><p>&copy; 2026 Jacob Busekrus. All rights reserved.</p></div>
+</footer>
 </body>
 </html>
