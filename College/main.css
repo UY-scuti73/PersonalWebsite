@@ -704,3 +704,11 @@ h4 {
     font-size: 1rem;
     color: var(--text2);
 }
+
+#research .split-list {
+    margin-top: 2rem;
+}
+
+#research .split-list + .projects-grid {
+    margin-top: 2rem;
+}
