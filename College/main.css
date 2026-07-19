@@ -308,7 +308,7 @@ header {
 
 .skill-orb {
     width: 104px;
-    height: 104px;
+    height: 85px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -326,6 +326,10 @@ header {
     box-shadow: inset 0 0 18px rgba(255, 255, 255, 0.04), 0 10px 26px rgba(0, 0, 0, 0.25);
     transition: 0.2s;
     font-weight: 650;
+}
+
+.skill-orb-large {
+    height: 104px;
 }
 
 .skill-orb:hover {
@@ -711,4 +715,45 @@ h4 {
 
 #research .split-list + .projects-grid {
     margin-top: 2rem;
+}
+
+/* --- Activity entry title row with right-aligned GitHub button --- */
+.activity-title-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-bottom: 0.45rem; /* matches your existing h3 bottom spacing */
+}
+
+.activity-title-row h3 {
+    margin-bottom: 0; /* override .content h3 margin-bottom */
+}
+
+.gh-btn {
+    flex: 0 0 auto;
+    width: 38px;
+    height: 38px;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    background: rgba(255, 255, 255, 0.03);
+    transition: 0.2s;
+}
+
+.gh-btn:hover {
+    border-color: rgba(96, 165, 250, 0.35);
+    background: rgba(96, 165, 250, 0.08);
+    transform: translateY(-1px);
+}
+
+.gh-img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    opacity: 0.9;
 }
