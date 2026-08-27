@@ -1,0 +1,67 @@
+          Order,Course Code,Course Name,Credits,Place Taken,Completed,Semester,Grade
+1,SLS1101,High School/Uni Transition,3,FAU,Yes,Fall 2021,A
+2,EDF4916,SAT Prep,1,FAU,Yes,Summer 2022,S
+3,SDS3483,Peer Mentoring,2,FAU,Yes,Fall 2023,A
+4,IDS2935 ,Designing Society,3,UF,Yes,Fall 2024,A
+5,HOS2333,Food Waste & Loss,3,UF,Yes,Summer 2025,A
+6,SPN1120,Spanish 1,4,FAU,Yes,Fall 2020,A-
+7,SPN1121,Spanish 2,4,FAU,Yes,Spring 2021,A
+8,ENC1101,College Writing 1,3,FAU,Yes,Fall 2021,A-
+9,ENC1102,College Writing 2,3,FAU,Yes,Fall 2022,A-
+10,ENC3246,Professional Communications,3,UF,Yes,Summer 2025,A
+11,LIT2010,Interpretation of Fiction,3,FAU,Yes,Summer 2023,A
+12,AMH2010,US History to 1877,3,FAU,Yes,Spring 2023,B
+13,AMH2020,US History Since 1877,3,FAU,Yes,Fall 2022,A
+14,POS2041,US Government,3,FAU,Yes,Spring 2023,A-
+15,WOH2010,World Civilization,3,FAU,Yes,Fall 2023,A-
+16,GEA2000,World Geography,3,FAU,Yes,Spring 2022,B-
+17,ECO2023,Microeconomics,3,FAU,Yes,Summer 2023,A
+18,ARH2000,Art Appreciation,3,FAU,Yes,Summer 2023,A
+19,MUL2010,Music Appreciation,3,FAU,Yes,Summer 2023,A
+20,CHM2045,Chemistry 1,3,FAU,Yes,Fall 2022,A
+21,CHM2045L,Chemistry 1 Lab,1,FAU,Yes,Fall 2022,B-
+22,PHY2048,Physics 1 for Engineers,3,FAU,Withdrew,Fall 2023,W
+23,PHY2048,Physics 1,4,FAU,Yes,Spring 2024,A
+24,PHY2048L,Physics 1 Lab,1,FAU,Yes,Fall 2023,B+
+25,PHY2049,Physics 2,3,UF,Yes,Fall 2024,B+
+26,PHY2049L,Physics 2 Lab,1,UF,Yes,Fall 2024,A
+27,WIS2040,Wildlife Issues,3,UF,Yes,Fall 2024,A
+28,AST2002,Intro to Astronomy,3,FAU,Yes,Spring 2022,A
+29,AST3018,Astronomy 1,3,UF,Yes,Spring 2025,A
+30,AST3019,Astronomy 2,3,UF,Yes,Spring 2025,A
+31,AST3722C,Observational Astronomy,3,UF,Yes,Spring 2025,A-
+32,AST2003,Solar System Astronomy,3,UF,Yes,Fall 2025,A
+33,AST2730,Astronomy Programming,4,UF,Yes,Spring 2026,A
+34,AST4930,Astronomy Machine Learning,3,UF,Yes,Fall 2025,A
+35,AST4930,Time Domain Astronomy,3,UF,Yes,Spring 2026,A
+36,MAC1147,Precalc & Trig,4,FAU,Yes,Fall 2021,B+
+37,MAC2311,Calculus 1,4,FAU,Yes,Fall 2022,A
+38,MAC2312,Calculus 2,4,FAU,Yes,Spring 2023,A
+39,MAC2313,Calculus 3,4,FAU,Yes,Spring 2024,A
+40,MAS3114,Computational Linear Algebra,3,UF,Yes,Fall 2024,A
+41,STA3032,Engineering Statistics,3,UF,Yes,Summer 2025,B
+42,EGN1002,Fundamentals of Engineering,3,FAU,Yes,Spring 2022,A
+43,COP2220,Programming in C,3,FAU,Yes,Fall 2021,A
+44,COP3014,Foundations of Computer Science,3,FAU,Yes,Spring 2022,A
+45,COP3035,Programming in Python,3,FAU,Yes,Spring 2024,A
+46,COT2000,Discrete Structures,3,FAU,Yes,Spring 2023,A
+47,CDA3203,Logic Design,3,FAU,Yes,Spring 2023,A
+48,CDA3101,Computer Orginization,3,UF,Yes,Fall 2024,A-
+49,CDA4102,Computer Architecture,3,FAU,Yes,Spring 2024,A
+50,CDA5155,Advanced Computer Architecture,3,UF Grad,Yes,Fall 2025,A-
+51,COP3530,Data Structures,3,FAU,Yes,Fall 2023,A
+52,COP5536 ,Advanced Data Structures,3,UF Grad,Yes,Fall 2025,A-
+53,COP4600,Operating Systems,3,UF,Yes,Spring 2025,B
+54,CIS4301,Database Systems,3,UF,Yes,Spring 2026,A
+55,COP5725,Database Management,3,UF Grad,In Progress,Fall 2026,N/A
+56,COP4533,Algorithm Design,3,UF,Yes,Fall 2025,B+
+57,COT5405,Analysis of Algorithms,3,UF Grad,In Progress,Fall 2026,N/A
+58,COP5556,Programming Languages,3,UF Grad,Yes,Spring 2026,A
+59,COP3813,Internet Computing,3,FAU,Yes,Fall 2023,A
+60,CEN3031,Software Engineering,3,UF,Yes,Spring 2025,A
+61,CIS4914,Senior Project,3,UF,Yes,Spring 2026,A
+62,CAP5771,Intro to Data Science,3,UF Grad,In Progress,Fall 2026,N/A
+63,,Graduate CS Class,3,UF Grad,No,Spring 2027,N/A
+64,,Graduate CS Class,3,UF Grad,No,Spring 2027,N/A
+65,,Graduate CS Class,3,UF Grad,No,Spring 2027,N/A
+66,,Graduate CS Class,3,UF Grad,No,Spring 2027,N/A

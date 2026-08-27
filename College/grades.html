@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Grades</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+<header>
+    <div class="container hero">
+        <div class="topbar">
+            <div class="brand">Grades Dashboard</div>
+            <nav class="nav">
+                <a class="active" href="index.html">Home</a>
+            </nav>
+        </div>
+
+        <div class="grades-layout">
+            <!-- LEFT: table (≈65%) -->
+            <section class="grades-card grades-table-card" aria-label="Grades table">
+                <div class="grades-card-head">
+                    <div>
+                        <div class="mini-label">Transcript</div>
+                        <h2 class="grades-title">Course Grades</h2>
+                    </div>
+                </div>
+
+                <div class="table-wrap" role="region" aria-label="Scrollable grades table">
+                    <table class="grades-table" id="gradesTable">
+                        <thead>
+                        <tr>
+                            <th class="is-sortable" data-key="index">#</th>
+                            <th class="is-sortable" data-key="course_code">Course Code</th>
+                            <th class="is-sortable" data-key="course_name">Course Title</th>
+                            <th class="is-sortable is-num" data-key="credits">Crd</th>
+                            <th class="is-sortable" data-key="place_taken">Place Taken</th>
+                            <th class="is-sortable" data-key="completed">Finished</th>
+                            <th class="is-sortable" data-key="semester">Semester</th>
+                            <th class="is-sortable" data-key="grade">Grade</th>
+                        </tr>
+                        </thead>
+
+                        <!-- IMPORTANT: JS renders into this tbody -->
+                        <tbody id="gradesTbody"></tbody>
+                    </table>
+                </div>
+            </section>
+
+            <!-- RIGHT: info panel (≈35%) -->
+            <aside class="grades-card grades-side" aria-label="Summary panel">
+                <div class="mini-label bottom-margin">Summary</div>
+
+                <div class="vstats">
+                    <div class="vstat">
+                        <strong id="statTotalCourses">—</strong>
+                        <span>Total courses</span>
+                    </div>
+                    <div class="vstat">
+                        <strong id="statTotalCredits">—</strong>
+                        <span>Total credits</span>
+                    </div>
+                </div>
+
+                <div class="mini grades-block">
+                    <div class="block-head">
+                        <h4 class="block-title">GPA</h4>
+                        <input
+                                class="gpa-rounding"
+                                type="number"
+                                min="0"
+                                step="1"
+                                placeholder="GPA Rounding"
+                                value="2"
+                                aria-label="GPA Rounding"
+                        />
+                    </div>
+
+                    <div class="gpa-grid">
+                        <div class="gpa-row"><span>Total</span><strong id="gpaTotal">—</strong></div>
+                        <div class="gpa-row"><span>Graduate</span><strong id="gpaGrad">—</strong></div>
+                        <div class="gpa-row"><span>Undergrad</span><strong id="gpaUG">—</strong></div>
+                        <div class="gpa-row"><span>UF</span><strong id="gpaUF">—</strong></div>
+                        <div class="gpa-row"><span>FAU</span><strong id="gpaFAU">—</strong></div>
+                    </div>
+                </div>
+
+                <!-- Grade distribution -->
+                <div class="mini grades-block">
+                    <!-- Grouped buckets -->
+                    <div class="dist-section">
+                        <div class="dist-title">Letter Grades</div>
+                        <div class="dist-grid">
+                            <div class="dist-item">
+                                <span class="dist-label">A’s</span>
+                                <strong class="dist-value" id="countAAll">—</strong>
+                            </div>
+                            <div class="dist-item">
+                                <span class="dist-label">B’s</span>
+                                <strong class="dist-value" id="countBAll">—</strong>
+                            </div>
+                            <div class="dist-item">
+                                <span class="dist-label">C’s</span>
+                                <strong class="dist-value" id="countCAll">—</strong>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Exact grades -->
+                    <div class="dist-section">
+                        <div class="dist-title">Grades</div>
+                        <div class="dist-grid dist-grid-tight" aria-label="Exact grade counts">
+                            <div class="dist-item"><span class="dist-label">A</span><strong class="dist-value" id="countA">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">A-</span><strong class="dist-value" id="countAMinus">—</strong></div>
+
+                            <div class="dist-item"><span class="dist-label">B+</span><strong class="dist-value" id="countBPlus">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">B</span><strong class="dist-value" id="countB">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">B-</span><strong class="dist-value" id="countBMinus">—</strong></div>
+
+                            <div class="dist-item"><span class="dist-label">C+</span><strong class="dist-value" id="countCPlus">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">C</span><strong class="dist-value" id="countC">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">C-</span><strong class="dist-value" id="countCMinus">—</strong></div>
+
+                            <div class="dist-item"><span class="dist-label">D+</span><strong class="dist-value" id="countDPlus">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">D</span><strong class="dist-value" id="countD">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">D-</span><strong class="dist-value" id="countDMinus">—</strong></div>
+
+                            <div class="dist-item"><span class="dist-label">F</span><strong class="dist-value" id="countF">—</strong></div>
+
+                            <div class="dist-item"><span class="dist-label">S</span><strong class="dist-value" id="countS">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">U</span><strong class="dist-value" id="countU">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">W</span><strong class="dist-value" id="countW">—</strong></div>
+                            <div class="dist-item"><span class="dist-label">N/A</span><strong class="dist-value" id="countNA">—</strong></div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </div>
+</header>
+
+<script defer src="grades_app.js"></script>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Jacob Busekrus. All rights reserved.</p>
+    </div>
+</footer>
+
+</body>
+</html>
