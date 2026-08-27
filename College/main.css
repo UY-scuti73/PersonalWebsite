@@ -634,7 +634,7 @@ h4{font-size:1rem;color:var(--text2)}
 
 @media (max-width: 640px){
     html{
-        font-size: 14px;
+        font-size: 12px;
     }
 
     .container{
