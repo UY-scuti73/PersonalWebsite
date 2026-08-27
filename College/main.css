@@ -632,27 +632,19 @@ h4{font-size:1rem;color:var(--text2)}
     .edu-quick{grid-template-columns:1fr}
 }
 
+/* Keep the container the same size; only add horizontal scrolling inside it */
+.table-wrap{
+    overflow-x: auto;
+    overflow-y: visible;
+    -webkit-overflow-scrolling: touch;
+}
+
+/* Only force horizontal scroll when the screen is small */
 @media (max-width: 960px){
-    /* Only the TABLE scrolls left/right */
     .grades-table{
-        display: block;              /* makes overflow work reliably */
-        width: 100%;
-        overflow-x: auto;
-        overflow-y: hidden;
-        -webkit-overflow-scrolling: touch;
-
-        /* force natural column widths instead of squeezing */
-        min-width: 900px;            /* adjust as needed */
-    }
-
-    /* keep table layout intact while the table is display:block */
-    .grades-table thead,
-    .grades-table tbody,
-    .grades-table tr{
-        display: table;
-        width: 100%;
-        table-layout: fixed;
+        min-width: 980px; /* adjust until columns stop bunching */
     }
 }
+
 
 
