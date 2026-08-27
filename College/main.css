@@ -632,9 +632,27 @@ h4{font-size:1rem;color:var(--text2)}
     .edu-quick{grid-template-columns:1fr}
 }
 
-@media (min-width: 960px){
+@media (max-width: 960px){
+    /* Only the TABLE scrolls left/right */
     .grades-table{
-        overflow: scroll;
+        display: block;              /* makes overflow work reliably */
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+        -webkit-overflow-scrolling: touch;
+
+        /* force natural column widths instead of squeezing */
+        min-width: 900px;            /* adjust as needed */
+    }
+
+    /* keep table layout intact while the table is display:block */
+    .grades-table thead,
+    .grades-table tbody,
+    .grades-table tr{
+        display: table;
+        width: 100%;
+        table-layout: fixed;
     }
 }
+
 
