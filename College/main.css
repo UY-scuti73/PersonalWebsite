@@ -635,6 +635,7 @@ h4{font-size:1rem;color:var(--text2)}
 @media (max-width: 960px){
     .grades-table{
         min-width: 900px;
+        overflow: auto;
     }
 }
 
