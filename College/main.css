@@ -632,26 +632,3 @@ h4{font-size:1rem;color:var(--text2)}
     .edu-quick{grid-template-columns:1fr}
 }
 
-/* Default: behave like the original layout (no forced horizontal scrolling) */
-.table-wrap{
-    overflow-x: visible;
-}
-
-.grades-table{
-    width: 100%;
-    min-width: 0;
-}
-
-/* Only when stacked / small screens: allow horizontal scrolling */
-@media (max-width: 960px){
-    .table-wrap{
-        overflow-x: auto;
-        overflow-y: visible;
-        -webkit-overflow-scrolling: touch;
-    }
-
-    .grades-table{
-        min-width: 900px; /* adjust until columns look right */
-    }
-}
-
