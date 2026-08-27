@@ -631,3 +631,21 @@ h4{font-size:1rem;color:var(--text2)}
     .section{padding:4rem 0}
     .edu-quick{grid-template-columns:1fr}
 }
+
+/* Default (desktop): no forced horizontal scrolling */
+.table-wrap{
+    overflow-x: visible;
+}
+
+/* When layout stacks (thin screens): allow horizontal scroll for the table */
+@media (max-width: 960px){
+    .table-wrap{
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    /* Force a wider-than-screen table so horizontal scroll actually appears */
+    .grades-table{
+        min-width: 900px;
+    }
+}
