@@ -50,7 +50,9 @@
     };
 
     const safeGradeClass = (grade) => String(grade || '')
-        .replace(/[^a-z0-9]/gi, '')
+        .trim()
+        .replace('+', 'PLUS')
+        .replace('-', '-')
         .toUpperCase();
 
     // ---- CSV parsing (handles quoted fields + commas) ----

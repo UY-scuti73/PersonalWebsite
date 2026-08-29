@@ -19,21 +19,51 @@
     --max: 1200px;
 
     /* Grade pill colors */
+    /* A+ intentionally omitted */
+
     --grade-a-bg: rgba(96, 165, 250, 0.14);
     --grade-a-border: rgba(96, 165, 250, 0.5);
     --grade-a-text: var(--text);
+
+    --grade-a-minus-bg: rgba(59, 130, 246, 0.14);
+    --grade-a-minus-border: rgba(59, 130, 246, 0.5);
+    --grade-a-minus-text: var(--text);
+
+    --grade-b-plus-bg: rgba(45, 212, 191, 0.14);
+    --grade-b-plus-border: rgba(45, 212, 191, 0.5);
+    --grade-b-plus-text: var(--text);
 
     --grade-b-bg: rgba(34, 197, 94, 0.14);
     --grade-b-border: rgba(34, 197, 94, 0.5);
     --grade-b-text: var(--text);
 
+    --grade-b-minus-bg: rgba(132, 204, 22, 0.14);
+    --grade-b-minus-border: rgba(132, 204, 22, 0.5);
+    --grade-b-minus-text: var(--text);
+
+    --grade-c-plus-bg: rgba(190, 242, 100, 0.14);
+    --grade-c-plus-border: rgba(190, 242, 100, 0.5);
+    --grade-c-plus-text: var(--text);
+
     --grade-c-bg: rgba(234, 179, 8, 0.14);
     --grade-c-border: rgba(234, 179, 8, 0.5);
     --grade-c-text: var(--text);
 
+    --grade-c-minus-bg: rgba(245, 158, 11, 0.14);
+    --grade-c-minus-border: rgba(245, 158, 11, 0.5);
+    --grade-c-minus-text: var(--text);
+
+    --grade-d-plus-bg: rgba(251, 146, 60, 0.14);
+    --grade-d-plus-border: rgba(251, 146, 60, 0.5);
+    --grade-d-plus-text: var(--text);
+
     --grade-d-bg: rgba(249, 115, 22, 0.14);
     --grade-d-border: rgba(249, 115, 22, 0.5);
     --grade-d-text: var(--text);
+
+    --grade-d-minus-bg: rgba(239, 68, 68, 0.14);
+    --grade-d-minus-border: rgba(239, 68, 68, 0.5);
+    --grade-d-minus-text: var(--text);
 
     --grade-f-bg: rgba(127, 29, 29, 0.22);
     --grade-f-border: rgba(127, 29, 29, 0.6);
@@ -291,6 +321,16 @@ header {
 .dist-item {
     border: 1px solid rgba(255, 255, 255, 0.06);
     background: rgba(255, 255, 255, 0.03);
+}
+
+.grade-toggle1_off {
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+}
+
+.grade-toggle2_on {
+    border: 1px solid rgba(255, 255, 255, 0.06) !important;
+    background: rgba(255, 255, 255, 0.03) !important;
 }
 
 .edu-block,
@@ -999,36 +1039,71 @@ footer {
     color: var(--text);
 }
 
-.grade-A,
-.grade-A_,
-.grade-A- {
+.grade-A {
     background: var(--grade-a-bg);
     border-color: var(--grade-a-border);
     color: var(--grade-a-text);
 }
 
-.grade-BPLUS,
-.grade-B,
-.grade-B- {
+.grade-A_,
+.grade-A- {
+    background: var(--grade-a-minus-bg);
+    border-color: var(--grade-a-minus-border);
+    color: var(--grade-a-minus-text);
+}
+
+.grade-BPLUS {
+    background: var(--grade-b-plus-bg);
+    border-color: var(--grade-b-plus-border);
+    color: var(--grade-b-plus-text);
+}
+
+.grade-B {
     background: var(--grade-b-bg);
     border-color: var(--grade-b-border);
     color: var(--grade-b-text);
 }
 
-.grade-CPLUS,
-.grade-C,
-.grade-C- {
+.grade-B- {
+    background: var(--grade-b-minus-bg);
+    border-color: var(--grade-b-minus-border);
+    color: var(--grade-b-minus-text);
+}
+
+.grade-CPLUS {
+    background: var(--grade-c-plus-bg);
+    border-color: var(--grade-c-plus-border);
+    color: var(--grade-c-plus-text);
+}
+
+.grade-C {
     background: var(--grade-c-bg);
     border-color: var(--grade-c-border);
     color: var(--grade-c-text);
 }
 
-.grade-DPLUS,
-.grade-D,
-.grade-D- {
+.grade-C- {
+    background: var(--grade-c-minus-bg);
+    border-color: var(--grade-c-minus-border);
+    color: var(--grade-c-minus-text);
+}
+
+.grade-DPLUS {
+    background: var(--grade-d-plus-bg);
+    border-color: var(--grade-d-plus-border);
+    color: var(--grade-d-plus-text);
+}
+
+.grade-D {
     background: var(--grade-d-bg);
     border-color: var(--grade-d-border);
     color: var(--grade-d-text);
+}
+
+.grade-D- {
+    background: var(--grade-d-minus-bg);
+    border-color: var(--grade-d-minus-border);
+    color: var(--grade-d-minus-text);
 }
 
 .grade-F {
