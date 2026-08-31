@@ -1,5 +1,5 @@
 (async () => {
-    const res = await fetch("https://moddownloads.onrender.com/stats.json", { cache: "no-store" });
+    const res = await fetch("https://publicmoddownloads.netlify.app/stats.json", { cache: "no-store" });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     const data = await res.json();
 
