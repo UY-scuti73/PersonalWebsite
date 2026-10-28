@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Busekrus’s Personal Websites</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { margin: 0; min-height: 100vh; background: #f5f6fa; color: #202b42; font-family: Arial, Helvetica, sans-serif; }
+        main { max-width: 1120px; margin: auto; padding: 80px 24px; }
+        header { text-align: center; margin-bottom: 46px; }
+        .eyebrow { color: #6575a5; font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; }
+        h1 { font-size: clamp(28px, 4vw, 42px); letter-spacing: -1.3px; margin: 16px 0; }
+        header p { color: #697386; line-height: 1.6; }
+        .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+        .card { display: block; text-decoration: none; color: inherit; background: white; border: 1px solid #e4e7ef; border-radius: 18px; overflow: hidden; box-shadow: 0 6px 22px #202b4206; transition: transform .2s, box-shadow .2s; }
+        .card:hover { transform: translateY(-6px); box-shadow: 0 14px 32px #202b4214; }
+        .card:focus-visible { outline: 3px solid #6475d9; outline-offset: 5px; }
+        .art { width: 100%; height: 180px; display: block; }
+        .content { padding: 26px; }
+        .category { color: #778199; text-transform: uppercase; letter-spacing: 1.8px; font-size: 10px; font-weight: bold; }
+        h2 { font-size: 22px; margin: 13px 0 12px; letter-spacing: -.5px; }
+        .description { color: #697386; font-size: 14px; line-height: 1.7; margin: 0 0 28px; }
+        .visit { font-size: 13px; color: #485bc0; font-weight: bold; display: flex; justify-content: space-between; align-items: center; }
+        footer { margin-top: 42px; text-align: center; color: #8991a2; font-size: 12px; }
+        @media (max-width: 740px) { main { padding-top: 48px; } .cards { grid-template-columns: 1fr; max-width: 440px; margin: auto; } }
+        @media (prefers-reduced-motion: reduce) { .card { transition: none; } }
+        /* Dark theme; preserve the existing layout and illustrations. */
+        body { background: #101522; color: #edf0f8; }
+        .eyebrow { color: #a7b4ee; }
+        header p, .description { color: #abb5c9; }
+        .card { background: #1b2334; border-color: #303b51; box-shadow: 0 6px 22px #00000020; }
+        .card:hover { box-shadow: 0 14px 32px #00000045; }
+        .category { color: #a2aec7; }
+        .visit { color: #b0bdff; }
+        footer { color: #929fb8; }
+    </style>
+</head>
+<body>
+<main>
+    <header>
+        <h1>Jacob Busekrus’s Personal Websites</h1>
+        <p>My work, my education, and what I do for fun. Explore what I have accomplished</p>
+    </header>
+    <section class="cards" aria-label="Personal websites">
+        <!-- Replace each example.com URL with your actual website address. Images are self-contained SVG illustrations. -->
+        <a class="card" href="Professional/index.html">
+            <svg class="art" viewBox="0 0 350 180" role="img" aria-label="Illustration of a professional workspace" xmlns="http://www.w3.org/2000/svg">
+                <rect width="350" height="180" fill="#e9eef8"/><rect x="91" y="33" width="168" height="105" rx="9" fill="#344364"/><rect x="99" y="41" width="152" height="88" rx="4" fill="#f8faff"/><rect x="111" y="54" width="42" height="61" rx="4" fill="#e2e8f5"/><rect x="164" y="56" width="65" height="8" rx="4" fill="#788bba"/><rect x="164" y="75" width="51" height="5" rx="2" fill="#d5ddeb"/><rect x="164" y="89" width="65" height="5" rx="2" fill="#d5ddeb"/><rect x="164" y="103" width="38" height="5" rx="2" fill="#d5ddeb"/><path d="M80 138h190l15 13H65z" fill="#65769c"/><rect x="52" y="153" width="246" height="5" rx="2" fill="#cbd5e8"/>
+            </svg>
+            <div class="content"><span class="category">Work &amp; experience</span><h2>Professional Portfolio</h2><p class="description">Explore my professional projects, skills, and experience.</p><span class="visit">Visit portfolio <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card" href="College/index.html">
+            <svg class="art" viewBox="0 0 350 180" role="img" aria-label="Illustration of books and a graduation cap" xmlns="http://www.w3.org/2000/svg">
+                <rect width="350" height="180" fill="#e9f1ed"/><rect x="93" y="124" width="176" height="22" rx="5" fill="#6a9180"/><rect x="106" y="129" width="158" height="12" rx="2" fill="#f6faf7"/><rect x="81" y="98" width="166" height="23" rx="5" fill="#98b6a6"/><rect x="94" y="103" width="145" height="13" rx="2" fill="#f6faf7"/><path d="M125 61v25q50 32 100 0V61" fill="#527766"/><path d="M175 29l77 30-77 30-77-30z" fill="#344f45"/><path d="M246 62v35" stroke="#c9aa64" stroke-width="4"/><circle cx="246" cy="101" r="5" fill="#c9aa64"/>
+            </svg>
+            <div class="content"><span class="category">Learning &amp; discovery</span><h2>College Portfolio</h2><p class="description">Discover my coursework, academic projects, and college journey.</p><span class="visit">Visit portfolio <span aria-hidden="true">↗</span></span></div>
+        </a>
+        <a class="card" href="Gaming/index.html">
+            <svg class="art" viewBox="0 0 350 180" role="img" aria-label="Illustration of a gaming controller" xmlns="http://www.w3.org/2000/svg">
+                <rect width="350" height="180" fill="#eeebf8"/><path d="M126 54h98q23 0 30 27l16 53q5 22-14 24-12 2-31-24H125q-19 26-31 24-19-2-14-24l16-53q7-27 30-27z" fill="#67518d"/><path d="M124 78v34m-17-17h34" stroke="#eee8f9" stroke-width="10" stroke-linecap="round"/><circle cx="227" cy="82" r="7" fill="#baa3e7"/><circle cx="243" cy="98" r="7" fill="#dfb4d7"/><circle cx="211" cy="98" r="7" fill="#9bbdd4"/><circle cx="227" cy="114" r="7" fill="#a7c9b5"/><rect x="161" y="82" width="28" height="5" rx="2" fill="#aa95c8"/><circle cx="155" cy="117" r="11" fill="#47355f"/><circle cx="194" cy="117" r="11" fill="#47355f"/>
+            </svg>
+            <div class="content"><span class="category">Play &amp; dedication</span><h2>Gaming Portfolio</h2><p class="description">Check out my gaming highlights, favorite games, and achievements.</p><span class="visit">Visit portfolio <span aria-hidden="true">↗</span></span></div>
+        </a>
+    </section>
+    <footer>Jacob Busekrus</footer>
+</main>
+</body>
+</html>
