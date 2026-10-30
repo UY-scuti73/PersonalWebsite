@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jacob Busekrus | Courses</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="javascript/webScript.js" defer></script>
+    <script src="javascript/courses.js" defer></script>
+</head>
+<body class="courses-page">
+<header id="top">
+    <div class="container hero">
+        <div class="topbar">
+            <div class="brand">Jacob Busekrus</div>
+            <nav class="nav" aria-label="Course sections">
+                <a href="index.html">Home</a>
+                <a href="#computer-science">CS</a>
+                <a href="#astronomy">Astronomy</a>
+                <a href="#mathematics">Math</a>
+                <a href="#science">Science</a>
+                <a href="#language-arts">LA</a>
+                <a href="#history">History</a>
+                <a href="#arts">Humanities</a>
+                <a href="#society">Societal</a>
+                <a href="#mentoring">Pedagogy</a>
+            </nav>
+        </div>
+        <div class="hero-grid">
+            <div class="hero-copy fade visible">
+                <h1>Courses</h1>
+                <p>
+                    A look at all the courses I have taken, what I have done, and what I have learned throughout my academic journey.
+                    In addition, check out my transcript for an organized spreadsheet with info and GPA.
+                </p>
+                <div class="actions">
+                    <a class="btn secondary" href="index.html">Home</a>
+                    <a class="btn secondary" href="skills.html">All Skills</a>
+                    <a class="btn secondary" href="activities.html">All Activities</a>
+                    <a class="btn primary" href="courses.html">All Courses</a>
+                </div>
+            </div>
+
+            <div class="media image-only fade visible" style="min-height:360px">
+                <img src="images/Headshot.jpg" alt="Headshot" />
+            </div>
+        </div>
+    </div>
+</header>
+
+<main id="courses">
+    <div class="container">
+        <br>
+        <div class="section-header fade visible">
+            <span class="eyebrow">Transcript</span>
+        </div>
+
+        <article
+                class="project-card fade visible"
+                style="max-width: 100%; display: flex; align-items: center; justify-content: space-between; gap: 1.5rem; flex-wrap: wrap;"
+        >
+            <div style="flex: 1; min-width: 250px;">
+                <h3>Transcript</h3>
+                <p style="color: var(--text2);">
+                    Take a look at my transcript, an organized spreadsheet of the courses I took and the grades I got in them.
+                    <br>
+                    Also see my GPA in different sections across my academic journey throughout all college level classes I have taken.
+                </p>
+            </div>
+
+            <a
+                    class="btn primary"
+                    href="grades.html"
+                    style="flex-shrink: 0; margin-left: auto;"
+            >
+                View Transcript
+            </a>
+        </article>
+    </div>
+
+    <div class="container">
+        <br><br>
+        <div class="section-header fade visible">
+            <span class="eyebrow">Courses</span>
+        </div>
+        <div class="toolbar" aria-label="Course filters">
+            <label for="search">Find a course</label>
+            <input id="search" type="search" placeholder="Course name, code, or semester…">
+            <label for="school">Institution</label>
+            <select id="school">
+                <option value="all">All courses — FAU &amp; UF</option>
+                <option value="FAU">FAU only (includes FAU High School)</option>
+                <option value="UF">UF only (includes graduate courses)</option>
+            </select>
+            <div class="actions" role="group" aria-label="Quick institution filter">
+                <button type="button" class="btn primary" data-school="all" aria-pressed="true">All courses</button>
+                <button type="button" class="btn secondary" data-school="FAU" aria-pressed="false">FAU only</button>
+                <button type="button" class="btn secondary" data-school="UF" aria-pressed="false">UF only</button>
+            </div>
+            <span class="count" id="count" aria-live="polite"></span>
+        </div>
+        <div id="course-sections"></div>
+        <p class="empty" id="empty" hidden>No courses match your search.</p>
+        <noscript>
+            <p class="empty">Enable JavaScript to display the course catalog.</p>
+        </noscript>
+    </div>
+</main>
+<footer>
+    <div class="container">
+        <p>&copy; 2026 Jacob Busekrus. All rights reserved.</p>
+        <p>Explore My Other Portfolios: <a href="../index.html">Here</a></p>
+    </div>
+</footer>
+</body>
+</html>
