@@ -41,7 +41,8 @@
         arrow.textContent = "▾";
         arrow.setAttribute("aria-hidden", "true");
         button.append(label, arrow);
-        header.replaceChildren(button);
+        header.insertAdjacentElement("afterend", button);
+        button.style.marginBottom = "1.5rem";
 
         button.addEventListener("click", () => {
             const expand = button.getAttribute("aria-expanded") !== "true";
